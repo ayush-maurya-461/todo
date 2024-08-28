@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TODOS } from './interfaces/todos';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todos';
+  todo: TODOS = {
+    id: '',
+    taskName: '',
+    description: '',
+    deadline: '',
+  };
+
+  passToForm(data: TODOS){
+    this.todo = data;
+  }
+
 }
