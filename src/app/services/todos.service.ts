@@ -10,13 +10,13 @@ export class TodosService {
       id:1,
       taskName: 'Test',
       description: 'Dummy Description',
-      deadline: '12/09/2023',
+      deadline: new Date('12/09/2023').toLocaleDateString(),
     },
     {
       id:2,
       taskName: 'Learn Angular',
       description: 'Learn Angular Shibangi',
-      deadline: '12/09/2024',
+      deadline: new Date('12/09/2024').toLocaleDateString(),
     },
   ];
 
@@ -28,8 +28,15 @@ export class TodosService {
     this.todos = this.todos.filter((todo)=>todo.id !== id)
   }
 
-  edit(){
-    
+  edit(todo: TODOS){
+    // const filteredEntry = this.todos.filter(entry => todo.id === entry.id)
+    // if(filteredEntry.length){
+    //   filteredEntry[0] = {...todo}
+    // }
+
+    let index  = this.todos.findIndex(entry => entry.id === todo.id);
+
+    this.todos[index] = todo
   }
 
 }
