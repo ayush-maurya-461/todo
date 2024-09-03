@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { TODOS } from '../interfaces/todos';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn:'root'
 })
 export class TodosService {
   todos: TODOS[] = [
@@ -10,13 +10,13 @@ export class TodosService {
       id:1,
       taskName: 'Test',
       description: 'Dummy Description',
-      deadline: new Date('12/09/2023').toLocaleDateString(),
+      deadline: new Date('12/09/2023'),
     },
     {
       id:2,
       taskName: 'Learn Angular',
       description: 'Learn Angular Shibangi',
-      deadline: new Date('12/09/2024').toLocaleDateString(),
+      deadline: new Date('12/09/2024'),
     },
   ];
 

@@ -12,7 +12,7 @@ export class AppComponent {
     id: '',
     taskName: '',
     description: '',
-    deadline: new Date().toDateString(),
+    deadline: new Date(),
   };
 
   passToForm(data: TODOS){
